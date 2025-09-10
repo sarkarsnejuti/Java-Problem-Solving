@@ -14,7 +14,11 @@ public class BankAccount {
 	  return initialBalance;
   }
   public void setInitialBalance(double initialBalance) {
+	  if(initialBalance>0) {
 	  this.initialBalance = initialBalance;
+  }else {
+	  System.out.println("Your account is empty");
+  }
   }
   public double getDepositeAmount() {
 	  return amount;
@@ -40,7 +44,7 @@ public class BankAccount {
 	  }
 	  else
 	  {
-		  System.out.println("Invalid amount!!, Please put valid amount");
+		  System.out.println("Insufficient money");
 	  }
   }
 }
